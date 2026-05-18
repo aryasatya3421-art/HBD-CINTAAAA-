@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 13th Birthday Anugrah Mikaila Cinta 🦖💗</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght=500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f2fe, #fce7f3);
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        /* Efek Hujan Dino & Hati */
+        .falling-element {
+            position: absolute;
+            position: fixed;
+            top: -10%;
+            z-index: 1;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Kartu Utama */
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 3px solid #fff;
+            border-radius: 30px;
+            padding: 40px 25px;
+            width: 90%;
+            max-width: 500px;
+            z-index: 10;
+            position: relative;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15), 0 0 20px rgba(236, 72, 153, 0.15);
+            text-align: center;
+        }
+
+        .dino-header {
+            font-size: 80px;
+            margin-bottom: 10px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            color: #0284c7;
+            font-size: 2rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px #fff;
+        }
+
+        .subtitle {
+            font-family: 'Fredoka One', cursive;
+            color: #db2777;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        /* Desain Game */
+        .game-section {
+            background: linear-gradient(135deg, #f0f9ff, #fdf2f8);
+            border: 3px dashed #f472b6;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .game-title {
+            font-weight: 700;
+            color: #0369a1;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 90px;
+            padding: 12px;
+            font-size: 1.3rem;
+            text-align: center;
+            border: 3px solid #93c5fd;
+            border-radius: 15px;
+            outline: none;
+            color: #0284c7;
+            font-family: 'Fredoka One', cursive;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #0ea5e9, #ec4899);
+            color: white;
+            font-family: 'Fredoka One', cursive;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
+        }
+
+        .hint {
+            color: #be185d;
+            font-weight: 700;
+            margin-top: 10px;
+            min-height: 22px;
+        }
+
+        /* Konten Kejutan Ultah */
+        .surprise-content {
+            display: none;
+            animation: popUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popUp {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Galeri 3 Foto */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .photo-frame {
+            background: white;
+            padding: 6px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: rotate(var(--r));
+            transition: 0.3s;
+            border: 2px solid #fbcfe8;
+        }
+
+        .photo-frame:hover {
+            transform: rotate(0deg) scale(1.1);
+            z-index: 15;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #e2e8f0;
+        }
+
+        .age-tag {
+            background: #ec4899;
+            color: white;
+            font-family: 'Fredoka One', cursive;
+            padding: 6px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        /* Teks Ucapan Panjang Umur 13 Tahun */
+        .long-wishes {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            text-align: justify;
+            background: rgba(255,255,255,0.6);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #0ea5e9;
+            border-right: 5px solid #ec4899;
+            margin-bottom: 20px;
+        }
+
+        .long-wishes p {
+            margin-bottom: 15px;
+        }
+
+        .footer-note {
+            font-family: 'Fredoka One', cursive;
+            color: #db2777;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="dino-header" id="dinoEmoji">🦕</div>
+        <h1 id="mainTitle">Anugrah Mikaila Cinta</h1>
+        <div class="subtitle" id="subTitle">Dino-Mite Puzzle! 🧩</div>
+
+        <!-- GAME BOX -->
+        <div class="game-section" id="gameBox">
+            <p class="game-title">Coba tebak umur kamu besok untuk menjinakkan Dino-nya dan membuka kado spesialmu! 😉</p>
+            <input type="number" id="ageGuess" placeholder="??">
+            <br>
+            <button class="btn" onclick="playGame()">Buka Kado! 🎁</button>
+            <div class="hint" id="gameHint"></div>
+        </div>
+
+        <!-- SURPRISE REWARD -->
+        <div class="surprise-content" id="surpriseArea">
+            <div class="age-tag">Happy 13th Birthday! 🎉🦕</div>
+
+            <!-- GALERI 3 FOTO -->
+            <div class="photo-gallery">
+                <!-- Foto 1 -->
+                <div class="photo-frame" style="--r: -6deg;">
+                    <img src="foto1.jpg" alt="Foto Cinta 1" onerror="this.src='https://placehold.co/150x200/fbcfe8/0284c7?text=Foto+Cinta+1'">
+                </div>
+                <!-- Foto 2 -->
+                <div class="photo-frame" style="--r: 2deg;">
+                    <img src="foto2.jpg" alt="Foto Berdua" onerror="this.src='https://placehold.co/150x200/e0f2fe/db2777?text=Foto+Berdua'">
+                </div>
+                <!-- Foto 3 -->
+                <div class="photo-frame" style="--r: 7deg;">
+                    <img src="foto3.jpg" alt="Foto Cinta 3" onerror="this.src='https://placehold.co/150x200/fbcfe8/0284c7?text=Foto+Cinta+3'">
+                </div>
+            </div>
+
+            <!-- TEKS UCAPAN SUPER PANJANG UNTUK UMUR 13 -->
+            <div class="long-wishes">
+                <p><b>Halo Anugrah Mikaila Cinta, pacarku yang paling manis, paling gemes, dan paling spesial di dunia!</b> 🦖💗</p>
+                
+                <p>Selamat ulang tahun yang ke-13 ya, Cinta! Yeay, besok umur kamu resmi bertambah. Aku bersyukur banget, banget, banget bisa ada di hidup kamu dan ikutan ngerayain hari spesialmu ini. Kamu tahu gak? Nama kamu itu bener-bener mencerminkan diri kamu, karena kehadiran kamu selalu membawa "Cinta" dan kebahagiaan yang luar biasa di hari-hari aku. Kamu itu mirip banget sama dinosaurus pink yang imut, selalu sukses bikin aku tersenyum seneng semenjak kita barengan.</p>
+                
+                <p>Di usiamu yang resmi menginjak 13 tahun ini, doa aku buat kamu panjang banget. Aku berdoa semoga Cinta selalu diberikan kesehatan, selalu dilindungi di mana pun kamu berada, makin pintar, makin disayang sama orang-orang di sekitar kamu, dan dilancarkan segala urusan sekolahnya. Jangan pernah bosen jadi orang baik dan tetap jadi Cinta yang ceria, penyabar, dan selalu lucu ya!</p>
+                
+                <p>Kalau kamu lagi ngerasa sedih, capek, atau lagi pusing sama tugas-tugas sekolah, inget ya kalau aku bakal selalu ada di sini buat kamu. Aku bakal siap jadi dinosaurus biru pelindung kamu yang bakal selalu dengerin semua cerita kamu, nemenin kamu, dan selalu berusaha bikin kamu tersenyum lagi. Kita sama-sama terus, saling dukung, dan menua bareng-bareng ya, Cinta? 👩‍❤️‍👨✨</p>
+                
+                <p>Makasih ya Cinta udah lahir ke dunia ini dan makasih udah milih aku jadi pacar kamu. Nikmatin hari bahagiamu ini, semoga kado kecil lewat website bertema dino kesukaanmu ini bisa bikin kamu bahagia hari ini. <i>Happy birthday, my beautiful dinosaur! Rawrrr!!</i> Aku sayang banget sama kamu, hari ini, besok, dan selamanya! 💖🦕🎈🎂</p>
+            </div>
+
+            <div class="footer-note">With Love, Pacarmu ❤️</div>
+        </div>
+    </div>
+
+    <script>
+        const correctAge = 13; // Sekarang dikunci ke angka 13
+        const fallingItems = ['🦕', '🦖', '❤️', '🌸', '✨'];
+
+        function spawnElement(isJackpot = false) {
+            const el = document.createElement('div');
+            el.classList.add('falling-element');
+            el.innerHTML = fallingItems[Math.floor(Math.random() * fallingItems.length)];
+            el.style.left = Math.random() * 100 + 'vw';
+            el.style.fontSize = Math.random() * 20 + 15 + 'px';
+            
+            const speed = isJackpot ? (Math.random() * 2 + 1) : (Math.random() * 3 + 3);
+            el.style.animationDuration = speed + 's';
+            
+            document.body.appendChild(el);
+            setTimeout(() => { el.remove(); }, speed * 1000);
+        }
+
+        let rainInterval = setInterval(() => spawnElement(false), 500);
+
+        function playGame() {
+            const guess = parseInt(document.getElementById('ageGuess').value);
+            const hint = document.getElementById('gameHint');
+            const gameBox = document.getElementById('gameBox');
+            const surpriseArea = document.getElementById('surpriseArea');
+            const mainTitle = document.getElementById('mainTitle');
+            const subTitle = document.getElementById('subTitle');
+            const dinoEmoji = document.getElementById('dinoEmoji');
+
+            if (isNaN(guess)) {
+                hint.innerText = "Isi angka umurmu dulu dong, Cinta! 🦖";
+                return;
+            }
+
+            if (guess < correctAge) {
+                hint.innerText = "Masa umur kamu segitu? Kekecilan sayang! 📈";
+            } else if (guess > correctAge) {
+                hint.innerText = "Wah, ketuaan itu! Kamu kan masih imut 📉";
+            } else {
+                hint.innerText = "";
+                gameBox.style.display = "none";
+                
+                mainTitle.innerText = "HAPPY BIRTHDAY CINTA! 🎉";
+                subTitle.innerText = "Rawrrr! I Love You So Much! 🦖💗";
+                dinoEmoji.innerText = "🦖";
+                dinoEmoji.style.animation = "float 1s ease-in-out infinite";
+                
+                surpriseArea.style.display = "block";
+                
+                clearInterval(rainInterval);
+                rainInterval = setInterval(() => spawnElement(true), 100);
+            }
+        }
+    </script>
+</body>
+</html>
